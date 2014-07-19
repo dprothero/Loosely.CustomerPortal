@@ -1,0 +1,22 @@
+﻿@model Loosely.CustomerPortal.WebApp.Models.Ticket
+
+@{
+    ViewBag.Title = "Open";
+}
+
+<h2>Open a Ticket</h2>
+
+@using ( Html.BeginForm() )
+{
+  <fieldset>
+    <legend>Ticket Info</legend>
+    <div>@Html.LabelFor(model => model.CustomerEmail)</div>
+    <div>@Html.TextBoxFor(model => model.CustomerEmail)</div>
+
+    <div>@Html.LabelFor(model => model.Message)</div>
+    <div>@Html.TextBoxFor(model => model.Message)</div>
+
+    <input type="submit" value="Open Ticket" />
+
+  </fieldset>
+}
